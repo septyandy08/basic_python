@@ -14,5 +14,10 @@ mylist2.append("b")
 print(mylist2)
 print(len(mylist2))
 
+mylist2.remove("a")
+mylist2.remove("b")
+
+print(mylist2)
+print(len(mylist2))
 for x in mylist2:
     print("Value: " + str(x))
