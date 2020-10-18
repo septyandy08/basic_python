@@ -35,7 +35,6 @@ def tampilkan_menu():
         exit()
     else:
         print("Menu tidak tersedia")
-        kembali_ke_menu()
 
 if __name__ == "__main__":
     while True:
