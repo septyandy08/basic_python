@@ -1,3 +1,11 @@
+import getpass
+import smtplib
+from email.mime.multipart import MIMEMultipart 
+from email.mime.text import MIMEText 
+from email.mime.base import MIMEBase
+from email.mime.image import MIMEImage
+from email import encoders
+
 f = open("receiver_list.txt", "a")
 
 f.write("m.rizqy@sci.ui.ac.id""\n")
@@ -5,16 +13,9 @@ f.write("muhammadrizqy.septyandy@gmail.com""\n")
 
 email_receiver = open("receiver_list.txt").read().splitlines()
 email_sender = input('Masukkan Alamat Email Anda: ')
-password = input('Masukkan Password Email Anda: ')
+password = getpass.getpass()
 
 f.close()
-
-import smtplib
-from email.mime.multipart import MIMEMultipart 
-from email.mime.text import MIMEText 
-from email.mime.base import MIMEBase
-from email.mime.image import MIMEImage
-from email import encoders
 
 # instance of MIMEMultipart 
 msg = MIMEMultipart() 
